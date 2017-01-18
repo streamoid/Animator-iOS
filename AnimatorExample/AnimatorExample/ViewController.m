@@ -25,5 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)openCameraButtonAction:(id)sender {
+    [[AnimatorClient sharedClient] showCameraScreen];
+}
+
 
 @end

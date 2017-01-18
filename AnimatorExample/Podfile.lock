@@ -1,0 +1,12 @@
+PODS:
+  - Streamoid-Animator (0.4.0)
+
+DEPENDENCIES:
+  - Streamoid-Animator
+
+SPEC CHECKSUMS:
+  Streamoid-Animator: c3e3bca923ab9c84bd23b493f953a3d87d2447bc
+
+PODFILE CHECKSUM: 0a7949f33bec6c5e942260515aceac53fe484e20
+
+COCOAPODS: 1.2.0.beta.1

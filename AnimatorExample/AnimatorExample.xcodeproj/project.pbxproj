@@ -13,9 +13,12 @@
 		B49A6AA21E2F7A4000D4DF8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49A6AA01E2F7A4000D4DF8B /* Main.storyboard */; };
 		B49A6AA41E2F7A4000D4DF8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49A6AA31E2F7A4000D4DF8B /* Assets.xcassets */; };
 		B49A6AA71E2F7A4000D4DF8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49A6AA51E2F7A4000D4DF8B /* LaunchScreen.storyboard */; };
+		E092E5AEC818029139016707 /* libPods-AnimatorExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EADB81269B9D960CDACC8C46 /* libPods-AnimatorExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88ED51D34954E3D1105EF21D /* Pods-AnimatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimatorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimatorExample/Pods-AnimatorExample.release.xcconfig"; sourceTree = "<group>"; };
+		A2888375F16AC0ECD9801F38 /* Pods-AnimatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimatorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimatorExample/Pods-AnimatorExample.debug.xcconfig"; sourceTree = "<group>"; };
 		B49A6A941E2F7A4000D4DF8B /* AnimatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49A6A981E2F7A4000D4DF8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B49A6A9A1E2F7A4000D4DF8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		B49A6AA31E2F7A4000D4DF8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B49A6AA61E2F7A4000D4DF8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B49A6AA81E2F7A4000D4DF8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EADB81269B9D960CDACC8C46 /* libPods-AnimatorExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimatorExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E092E5AEC818029139016707 /* libPods-AnimatorExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B9545D0A99DA2B8CBCFDC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2888375F16AC0ECD9801F38 /* Pods-AnimatorExample.debug.xcconfig */,
+				88ED51D34954E3D1105EF21D /* Pods-AnimatorExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A9AD0B5E27A061FF7DF45D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EADB81269B9D960CDACC8C46 /* libPods-AnimatorExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B49A6A8B1E2F7A4000D4DF8B = {
 			isa = PBXGroup;
 			children = (
 				B49A6A961E2F7A4000D4DF8B /* AnimatorExample */,
 				B49A6A951E2F7A4000D4DF8B /* Products */,
+				33B9545D0A99DA2B8CBCFDC5 /* Pods */,
+				9A9AD0B5E27A061FF7DF45D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B49A6AAB1E2F7A4000D4DF8B /* Build configuration list for PBXNativeTarget "AnimatorExample" */;
 			buildPhases = (
+				85D44C64FA0E91A181385F46 /* [CP] Check Pods Manifest.lock */,
 				B49A6A901E2F7A4000D4DF8B /* Sources */,
 				B49A6A911E2F7A4000D4DF8B /* Frameworks */,
 				B49A6A921E2F7A4000D4DF8B /* Resources */,
+				3A043C50DF6807A203D80AAB /* [CP] Embed Pods Frameworks */,
+				4F2F00E10AA0EA05EE71FABD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A043C50DF6807A203D80AAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimatorExample/Pods-AnimatorExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F2F00E10AA0EA05EE71FABD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimatorExample/Pods-AnimatorExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D44C64FA0E91A181385F46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B49A6A901E2F7A4000D4DF8B /* Sources */ = {
@@ -219,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -261,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -271,10 +346,12 @@
 		};
 		B49A6AAC1E2F7A4000D4DF8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2888375F16AC0ECD9801F38 /* Pods-AnimatorExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YWBXQA3Y39;
 				INFOPLIST_FILE = AnimatorExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.streamoid.AnimatorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,10 +360,12 @@
 		};
 		B49A6AAD1E2F7A4000D4DF8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88ED51D34954E3D1105EF21D /* Pods-AnimatorExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YWBXQA3Y39;
 				INFOPLIST_FILE = AnimatorExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.streamoid.AnimatorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +391,7 @@
 				B49A6AAD1E2F7A4000D4DF8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

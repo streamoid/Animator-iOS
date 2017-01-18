@@ -1,0 +1,1 @@
+../../../../Streamoid-Animator/Animator.framework/Headers/Animator.h

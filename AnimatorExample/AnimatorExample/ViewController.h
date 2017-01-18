@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Animator/Animator.h>
 
 @interface ViewController : UIViewController
 
+- (IBAction)openCameraButtonAction:(id)sender;
 
 @end
 
