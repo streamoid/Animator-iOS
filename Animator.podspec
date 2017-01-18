@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.authors = {"vengal"=>"vengal@streamoid.com", "naveen"=>"naveen@streamoid.com"}
   s.homepage = "http://streamoid.com/"
   s.requires_arc = true
-  s.source = { git: 'https://github.com/StreamoidGitAdmin/Animator-iOS.git', tag: "0.1.0" }
+  s.source = { git: 'https://github.com/streamoid/Animator-iOS.git', tag: "0.1.0" }
 
   s.ios.deployment_target    = '8.0'
   s.ios.vendored_framework   = 'Animator.framework'

@@ -1,4 +1,4 @@
-# PiQAlike iOS SDK Releases
+# Animator iOS SDK Releases
 
 This repository contains binary distributions of Animator iOS framework.
 
@@ -6,18 +6,18 @@ If you have any questions, comments, or issues related to Animator, Please conta
 
 ### Animator
 
-PiQAlike is an iOS SDK for visual search recommendations in fashion. PiQAlike SDK provided by Streamoid Technologies lets you seemlessly integrate visual search feature into your native iOS applications.
+Animator is an iOS SDK for visual search recommendations in fashion. Animator SDK provided by Streamoid Technologies lets you seemlessly integrate visual search feature into your native iOS applications.
 
 - what is visual search in fashion ?
-- That perfect summer dress you saw in a magazine or those shoes that the woman was wearing at the coffee shop this morning. Just take a photo and find similar products in your app using PiQAlike SDK.
+- That perfect summer dress you saw in a magazine or those shoes that the woman was wearing at the coffee shop this morning. Just take a photo and find similar products in your app using Animator SDK.
 
 ### Installation
 
-PiQAlike can be installed directly into your application by importing a framework or via CocoaPods. Quick installation instructions are provided below for reference.
+Animator can be installed directly into your application by importing a framework or via CocoaPods. Quick installation instructions are provided below for reference.
 
 ##### CocoaPods Installation:
 
-The recommended path for installation is CocoaPods. CocoaPods provides a simple, versioned dependency management system that automates the tedious and error prone aspects of manually configuring libraries and frameworks. You can add PiQAlike to your project via CocoaPods by doing the following :
+The recommended path for installation is CocoaPods. CocoaPods provides a simple, versioned dependency management system that automates the tedious and error prone aspects of manually configuring libraries and frameworks. You can add Animator to your project via CocoaPods by doing the following :
 
 ```sh
 $ sudo gem install cocoapods
@@ -44,7 +44,7 @@ Download the appropriate build artifact from this repository and add it to your 
 
 ``` bash ${SRCROOT}/Animator.framework/strip-framework.sh```
 
-Build and run your project to verify installation was successful. Once you have completed a successful build, refer to the Verifying PiQAlike Configuration section below for details on how to test your setup.
+Build and run your project to verify installation was successful. Once you have completed a successful build, refer to the Verifying Animator Configuration section below for details on how to test your setup.
 
 ### Configuration
 - Disable App Transport Security(ATS) to support http : 
@@ -66,14 +66,14 @@ Build and run your project to verify installation was successful. Once you have 
 
 ### Verifying Animator Configuration
 
-Once you have finished installing PiQAlike via CocoaPods or framework, you can test your configuration by importing the headers and connecting a client to the PiQAlike cloud. To do so, edit your application delegate to include the code below (note that you must substitute the client name and client token placeholder text with your actual values, in order to get these values please contact us at support@streamoid.com):
+Once you have finished installing Animator via CocoaPods or framework, you can test your configuration by importing the headers and connecting a client to the Animator cloud. To do so, edit your application delegate to include the code below (note that you must substitute the client name and client token placeholder text with your actual values, in order to get these values please contact us at support@streamoid.com):
 
 ```sh
-#import <PiQAlike/PiQAlike.h>
+#import <Animator/Animator.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-[PiQAlikeClient initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
+[Animator initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
 }
 ```
 Launch your application and verify that the connection is successful. You are now ready to begin visual search.
