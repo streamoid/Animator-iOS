@@ -25,7 +25,7 @@ $ pod setup
 ```
 Now create a Podfile in the root of your project directory and add the following:
 ```sh
-pod 'Animator'
+pod 'Streamoid-Animator'
 ```
 Complete the installation by executing:
 ```sh
@@ -66,7 +66,7 @@ Build and run your project to verify installation was successful. Once you have 
 
 ### Verifying Animator Configuration
 
-Once you have finished installing Animator via CocoaPods or framework, you can test your configuration by importing the headers and connecting a client to the Animator cloud. To do so, edit your application delegate to include the code below (note that you must substitute the client name and client token placeholder text with your actual values, in order to get these values please contact us at support@streamoid.com):
+Once you have finished installing Animator via CocoaPods or framework, you can test your configuration by importing the headers and connecting a client to the Animator cloud. To do so, edit your view controller   to include the code below (note that you must substitute the client name and client token placeholder text with your actual values, in order to get these values please contact us at support@streamoid.com):
 
 ```sh
 #import <Animator/Animator.h>
