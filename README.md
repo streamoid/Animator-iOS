@@ -82,7 +82,7 @@ Once you have finished installing Animator via CocoaPods or framework, you can t
 [AnimatorClient initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
 }
 ```
-Launch your application and verify that the connection is successful. You are now ready to begin visual search.
+Launch your application and verify that the connection is successful. You are now ready to begin exact search.
 
 ### Contact
 
