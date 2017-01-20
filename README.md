@@ -6,10 +6,16 @@ If you have any questions, comments, or issues related to Animator, Please conta
 
 ### Animator
 
-Animator is an iOS SDK for visual search recommendations in fashion. Animator SDK provided by Streamoid Technologies lets you seemlessly integrate visual search feature into your native iOS applications.
+Animator iOS SDK provided by Streamoid Technologies, acts as a bridge between offline advertisements and purchasing those products online
 
-- what is visual search in fashion ?
-- That perfect summer dress you saw in a magazine or those shoes that the woman was wearing at the coffee shop this morning. Just take a photo and find similar products in your app using Animator SDK.
+Imagine a scenario where you see some product advertisement in a newspaper ad or in a product catalogue, feel like knowing more about that product or buying it online. Animator iOS SDK solves the exact same problem.
+
+If the advertisement is Animator enabled, user can click on the product image using the camera in homescreen, unlock many of animator features like : 
+- Watching a video related to that product
+- Buy that product online by navigating to the product's webpage
+- Call the shop/brand directly in 1 click
+- Listen to a promo audio clip
+- View more images of the product
 
 ### Installation
 
