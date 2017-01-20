@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <Animator/Animator.h>
+
+#define CLIENT_NAME @"Replace this with your company name"
+#define CLIENT_TOKEN @"Replace this with your token"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AnimatorClient initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
     return YES;
 }
 

@@ -73,7 +73,7 @@ Once you have finished installing Animator via CocoaPods or framework, you can t
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-[Animator initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
+[AnimatorClient initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
 }
 ```
 Launch your application and verify that the connection is successful. You are now ready to begin visual search.
