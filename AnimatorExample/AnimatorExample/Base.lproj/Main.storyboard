@@ -53,6 +53,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="English"/>
+                                <connections>
+                                    <action selector="selectLanguageButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FsT-xc-sHV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -68,6 +71,9 @@
                             <constraint firstItem="lg0-GA-ccK" firstAttribute="baseline" secondItem="kga-XT-H9G" secondAttribute="baseline" id="yNL-VZ-yCA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="langBtn" destination="kga-XT-H9G" id="Wax-AR-KrR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
