@@ -101,6 +101,18 @@ extern NSString * _Nullable const kAnimatorIsNotificationEnabled;
  */
 + (AnimatorClient * _Nullable)sharedClient;
 
+/*!
+ * @breif Used to initialize SDK for a client.
+ *
+ * @discussion To use it, simply call
+ * @code
+ * [AnimatorClient initializeWithClientName:@"abz" andClientToken:@"2A232-312"];
+ * @endcode
+ *
+ * @param clientName : Name of the client
+ * @param clientToken : Token of the client, which is provided by streamoid.
+ */
++ (void)initializeWithClientName:(NSString * _Nonnull)clientName andClientToken:(NSString * _Nonnull)clientToken;
 
 /*!
  * @breif Shows the camera screen to proceed futher for IR search.

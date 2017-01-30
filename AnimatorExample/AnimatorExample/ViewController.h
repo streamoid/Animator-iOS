@@ -11,7 +11,12 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIButton *langBtn;
+
+
 - (IBAction)openCameraButtonAction:(id)sender;
+- (IBAction)selectLanguageButtonAction:(id)sender;
+
 
 @end
 

@@ -2,7 +2,7 @@
 
 This repository contains binary distributions of Animator iOS framework.
 
-If you have any questions, comments, or issues related to Animator, Please contact the team by emailing support@streamoid.com.
+If you have any questions, comments, or issues related to Animator, Please contact the team by emailing streamoid.support@streamoid.com.
 
 ### Animator
 
@@ -72,7 +72,7 @@ Build and run your project to verify installation was successful. Once you have 
 
 ### Verifying Animator Configuration
 
-Once you have finished installing Animator via CocoaPods or framework, you can test your configuration by importing the headers and connecting a client to the Animator cloud. To do so, edit your view controller   to include the code below (note that you must substitute the client name and client token placeholder text with your actual values, in order to get these values please contact us at support@streamoid.com):
+Once you have finished installing Animator via CocoaPods or framework, you can test your configuration by importing the headers and connecting a client to the Animator cloud. To do so, edit your view controller   to include the code below (note that you must substitute the client name and client token placeholder text with your actual values, in order to get these values please contact us at streamoid.support@streamoid.com):
 
 ```sh
 #import <Animator/Animator.h>
@@ -84,6 +84,17 @@ Once you have finished installing Animator via CocoaPods or framework, you can t
 ```
 Launch your application and verify that the connection is successful. You are now ready to begin exact search.
 
+### Use your preferred language
+
+Animator Framework supports multiple languages. As of now, English, Spanish, Italian, German are supported. Many more to come...
+It is optional to set the language. If no language is set, we use the default language used by app.
+After initializing an animator client in your application, you can specify the language you need to see the framework by using the following method in framework:
+
+```sh
++ (void)setLanguage:(AnimatorSDKLanguage )language;
+```
+You can change the preferred language any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all screens in framework will have the language you have set previously.
+
 ### Contact
 
-You can reach the Streamoid team at any time by emailing support@streamoid.com.
+You can reach the Streamoid team at any time by emailing streamoid.support@streamoid.com.

@@ -27,7 +27,6 @@ extern NSString * _Nonnull const kAnimatorClientIRSearch;
 extern NSString * _Nonnull const kAnimatorClientHotspotClicked;
 
 
-
 /*!
  * @brief kAnimatorIsMatchFound -- Key for to know whether match received on not in IR search which is in kAnimatorClientIRSearch notification's user info.
  * @discussion - Use this constant as below.
@@ -85,6 +84,25 @@ extern NSString * _Nullable const kAnimatorClickedHotspotOption;
  */
 extern NSString * _Nullable const kAnimatorIsNotificationEnabled;
 
+
+/*!
+ * @brief AnimatorSDKLanguage -- Language enum to specify which language to use in SDK.
+ * @discussion - Set this enum value to pass in setLanguage: method, Use this enum as below.
+ * @code
+ * [AnimatorClient setLanguage:eAnimatorLanguageSpanish];
+ * @endCode
+ */
+
+typedef enum : NSInteger
+{
+    eAnimatorLanguageEnglish,
+    eAnimatorLanguageSpanish,
+    eAnimatorLanguageItalian,
+    eAnimatorLanguageGerman
+}AnimatorSDKLanguage;
+
+
+
 /*!
  * @class AnimatorClient
  * @discussion Main class for SDK to intialize and interact with client.
@@ -115,6 +133,25 @@ extern NSString * _Nullable const kAnimatorIsNotificationEnabled;
 + (void)initializeWithClientName:(NSString * _Nonnull)clientName andClientToken:(NSString * _Nonnull)clientToken;
 
 /*!
+ * @breif Sets the language used in SDK. If not set will use the App default language.
+ *
+ * @discussion Users of the sdk would call this method before calling  -(void)showCameraScreen method :
+ * @code [AnimatorClient setAnimatorSDKLanguage:AnimatorLanguageSpanish]; @endcode
+ *
+ */
++ (void)setLanguage:(AnimatorSDKLanguage )language;
+
+/*!
+ * @breif Sets the custom params, which are used in SDK. If user doesn't want to customize, simply pass nil as params
+ *
+ * @discussion Users of the sdk would call this method before calling  -(void)showCameraScreen method :
+ * @code [AnimatorClient setCustomParameters:dictionary]; @endcode
+ *
+ * @param params : List of key values pairs, which are used to customize SDK.
+ */
++ (void)setCustomParameters:(NSDictionary * _Nullable)params;
+
+/*!
  * @breif Shows the camera screen to proceed futher for IR search.
  *
  * @discussion Users of the sdk would call this method on a singleton AnimatorClient instance :
@@ -123,15 +160,5 @@ extern NSString * _Nullable const kAnimatorIsNotificationEnabled;
  */
 - (void)showCameraScreen;
 
-/*!
- * @breif Shows the camera screen to proceed futher for IR search.
- *
- * @discussion Users of the sdk would call this method on a singleton AnimatorClient instance :
- * @code [[AnimatorClient sharedClient] showCameraScreenWithOptions:dictionary]; @endcode
- *
- * @param params : List of key values pairs, which are used to customize SDK.
- */
-
-- (void)showCameraScreenWithOptions:(NSDictionary * _Nullable)params;
 
 @end
