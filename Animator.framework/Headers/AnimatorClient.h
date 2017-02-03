@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "AnimatorCustomParams.h"
 
 /**
  * @header
@@ -86,7 +87,7 @@ extern NSString * _Nullable const kAnimatorIsNotificationEnabled;
 
 
 /*!
- * @brief AnimatorSDKLanguage -- Language enum to specify which language to use in SDK.
+ * @typedef AnimatorSDKLanguage -- Language enum to specify which language to use in SDK.
  * @discussion - Set this enum value to pass in setLanguage: method, Use this enum as below.
  * @code
  * [AnimatorClient setLanguage:eAnimatorLanguageSpanish];
@@ -97,6 +98,9 @@ typedef enum : NSInteger
 {
     eAnimatorLanguageEnglish,
     eAnimatorLanguageSpanish,
+    eAnimatorLanguageRussian,
+    eAnimatorLanguageChineseSimplified,
+    eAnimatorLanguageChineseTraditional,
     eAnimatorLanguageItalian,
     eAnimatorLanguageGerman
 }AnimatorSDKLanguage;
@@ -111,7 +115,7 @@ typedef enum : NSInteger
 @interface AnimatorClient : NSObject
 
 /*!
- * @breif This method creates a shared instance object of a AnimatorClient class.
+ * @breif This method returms a signleton instance of AnimatorClient. Clients can call all the instance methods available in AnimatorClient class on singleton instance.
  *
  * @discussion To use it, simply call @code [AnimatorClient sharedClient]; @endcode
  *
@@ -136,20 +140,10 @@ typedef enum : NSInteger
  * @breif Sets the language used in SDK. If not set will use the App default language.
  *
  * @discussion Users of the sdk would call this method before calling  -(void)showCameraScreen method :
- * @code [AnimatorClient setAnimatorSDKLanguage:AnimatorLanguageSpanish]; @endcode
+ * @code [[AnimatorClient sharedClient] setAnimatorSDKLanguage:AnimatorLanguageSpanish]; @endcode
  *
  */
-+ (void)setLanguage:(AnimatorSDKLanguage )language;
-
-/*!
- * @breif Sets the custom params, which are used in SDK. If user doesn't want to customize, simply pass nil as params
- *
- * @discussion Users of the sdk would call this method before calling  -(void)showCameraScreen method :
- * @code [AnimatorClient setCustomParameters:dictionary]; @endcode
- *
- * @param params : List of key values pairs, which are used to customize SDK.
- */
-+ (void)setCustomParameters:(NSDictionary * _Nullable)params;
+- (void)setLanguage:(AnimatorSDKLanguage )language;
 
 /*!
  * @breif Shows the camera screen to proceed futher for IR search.
@@ -159,6 +153,16 @@ typedef enum : NSInteger
  *
  */
 - (void)showCameraScreen;
+
+/*!
+ * @breif AnimatorClient's AnimatorCustomParams object, which are used to customise SDK. If user doesn't want to customize, simply pass nil as params object
+ *
+ * @discussion Users of the sdk would set this object value before calling  -(void)showCameraScreen method :
+ * @code [AnimatorClient sharedClient].customParams = customParamObject;  or [[AnimatorClient sharedClient] setCustomParams:customParamObject]; @endcode
+ *
+ */
+
+@property (nonatomic, strong) AnimatorCustomParams * _Nullable customParams;
 
 
 @end
