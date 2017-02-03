@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char AnimatorVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <Animator/PublicHeader.h>
 
 #import <Animator/AnimatorClient.h>
+#import <Animator/AnimatorCustomParams.h>
