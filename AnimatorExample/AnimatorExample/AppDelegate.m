@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 #import <Animator/Animator.h>
 
-#define CLIENT_NAME @"Replace this with your company name"
-#define CLIENT_TOKEN @"Replace this with your token"
+#define CLIENT_NAME @"" //@"Replace this with your company name"
+#define CLIENT_TOKEN @"" //@"Replace this with your token"
 
 @interface AppDelegate ()
 
@@ -24,8 +24,8 @@
     [AnimatorClient initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
     AnimatorCustomParams *customParams = [[AnimatorCustomParams alloc] init];
     customParams.isNotificationEnabled = YES;
-    customParams.hotspotInnerCircleHexColor = @"#FF00FF";
-    customParams.hotspotOuterCircleHexColor = @"#006400";
+    //customParams.hotspotInnerCircleHexColor = @"#FF00FF";
+    //customParams.hotspotOuterCircleHexColor = @"#006400";
     [[AnimatorClient sharedClient] setCustomParams:customParams];
     return YES;
 }
