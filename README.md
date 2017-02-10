@@ -112,7 +112,7 @@ customParams.hotspotOuterCircleHexColor = @"#006400";
 ```
 You can set the custom params any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all icons and background colors in framework will have the custom values.
 
-### Open Animator framework's Camera
+### Open framework's Camera
 
 ```sh
 [[AnimatorClient sharedClient] showCameraScreen];
