@@ -1,5 +1,7 @@
 # Animator iOS SDK Releases
 
+[![N|Solid](http://www.streamoid.com/images/logo-white.png)](http://www.streamoid.com/)
+
 This repository contains binary distributions of Animator iOS framework.
 
 If you have any questions, comments, or issues related to Animator, Please contact the team by emailing streamoid.support@streamoid.com.
@@ -65,7 +67,7 @@ Build and run your project to verify installation was successful. Once you have 
 - Enable permission to support camera : 
 - In iOS10 and Xcode 8, Apple requires permission to use came and photo library. So, the following must be added to your info.plist filte to use camera and photo library:
 ```sh 
-<key>Privacy - Camera Usage Description</key>
+<key>NSCameraUsageDescription</key>
 <value>Uses Camera </value>
 
 ```
@@ -86,7 +88,7 @@ Launch your application and verify that the connection is successful. You are no
 
 ### Use your preferred language
 
-Animator Framework supports multiple languages. As of now, English, Spanish, Italian, German are supported. Many more to come...
+Animator Framework supports multiple languages. As of now, English, Spanish, Chinese (Simplified), Chinese (Traditional), Italian, German are supported. Many more to come...
 It is optional to set the language. If no language is set, we use the default language used by app.
 After initializing an animator client in your application, you can specify the language you need to see the framework by using the following method in framework:
 
@@ -94,6 +96,26 @@ After initializing an animator client in your application, you can specify the l
 + (void)setLanguage:(AnimatorSDKLanguage )language;
 ```
 You can change the preferred language any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all screens in framework will have the language you have set previously.
+
+### Customize the framework
+
+Animator Framework supports customization. As of now user can customise icons and background colours. Many more to come...
+It is optional to do customization. If no custom params are set, we use the default icons and colours in SDK.
+After initializing an animator client in your application, you can specify the custom params you need to see the framework by using the following in framework:
+
+```sh
+AnimatorCustomParams *customParams = [[AnimatorCustomParams alloc] init];
+customParams.isNotificationEnabled = YES;
+customParams.hotspotInnerCircleHexColor = @"#FF00FF";
+customParams.hotspotOuterCircleHexColor = @"#006400";
+[[AnimatorClient sharedClient] setCustomParams:customParams];
+```
+You can set the custom params any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all icons and background colors in framework will have the custom values.
+
+### Open framework's Camera
+
+```sh
+[[AnimatorClient sharedClient] showCameraScreen];
 
 ### Contact
 

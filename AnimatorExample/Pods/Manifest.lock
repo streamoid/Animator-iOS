@@ -1,11 +1,11 @@
 PODS:
-  - Streamoid-Animator (1.6.0)
+  - Streamoid-Animator (1.7.0)
 
 DEPENDENCIES:
   - Streamoid-Animator
 
 SPEC CHECKSUMS:
-  Streamoid-Animator: 8ba480b175d6054e9a30c976b1c272145c3b537d
+  Streamoid-Animator: 1e87050aa99c9c7039f8877713158b8624bd763e
 
 PODFILE CHECKSUM: 0a7949f33bec6c5e942260515aceac53fe484e20
 
