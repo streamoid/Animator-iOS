@@ -67,7 +67,7 @@ Build and run your project to verify installation was successful. Once you have 
 - Enable permission to support camera : 
 - In iOS10 and Xcode 8, Apple requires permission to use came and photo library. So, the following must be added to your info.plist filte to use camera and photo library:
 ```sh 
-<key>Privacy - Camera Usage Description</key>
+<key>NSCameraUsageDescription</key>
 <value>Uses Camera </value>
 
 ```
@@ -97,9 +97,9 @@ After initializing an animator client in your application, you can specify the l
 ```
 You can change the preferred language any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all screens in framework will have the language you have set previously.
 
-### Customize Animator Framework
+### Customize the framework
 
-Animator Framework supports customisation. As of now user can customise icons and background colours. Many more to come...
+Animator Framework supports customization. As of now user can customise icons and background colours. Many more to come...
 It is optional to do customization. If no custom params are set, we use the default icons and colours in SDK.
 After initializing an animator client in your application, you can specify the custom params you need to see the framework by using the following in framework:
 
@@ -111,6 +111,11 @@ customParams.hotspotOuterCircleHexColor = @"#006400";
 [[AnimatorClient sharedClient] setCustomParams:customParams];
 ```
 You can set the custom params any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all icons and background colors in framework will have the custom values.
+
+### Open Animator framework's Camera
+
+```sh
+[[AnimatorClient sharedClient] showCameraScreen];
 
 ### Contact
 
