@@ -74,18 +74,6 @@ extern NSString * _Nullable const kAnimatorClickedHotspotId;
 extern NSString * _Nullable const kAnimatorClickedHotspotOption;
 
 
-
-/*!
- * @brief kAnimatorIsNotificationEnabled -- Key used to enable or disable notifications.
- * If Yes it will enable notifications and user has to listen to them.
- * @discussion - Use this constant as below.
- * @code
- * [dictionary setObject:[NSNumber numberWithBool:YES] forKey:kAnimatorIsNotificationEnabled];
- * @endCode
- */
-extern NSString * _Nullable const kAnimatorIsNotificationEnabled;
-
-
 /*!
  * @typedef AnimatorSDKLanguage -- Language enum to specify which language to use in SDK.
  * @discussion - Set this enum value to pass in setLanguage: method, Use this enum as below.
