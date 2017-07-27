@@ -1,6 +1,6 @@
 # Animator iOS SDK Releases
 
-[![N|Solid](http://www.streamoid.com/images/logo-white.png)](http://www.streamoid.com/)
+[![N|Solid](http://www.streamoid.com/images/Streamoid-logo.png)](http://www.streamoid.com/)
 
 This repository contains binary distributions of Animator iOS framework.
 
@@ -65,7 +65,7 @@ Build and run your project to verify installation was successful. Once you have 
 </dict>
 ```
 - Enable permission to support camera : 
-- In iOS10 and Xcode 8, Apple requires permission to use came and photo library. So, the following must be added to your info.plist filte to use camera and photo library:
+- In iOS10 and Xcode 8, Apple requires permission to use camera and photo library. So, the following must be added to your info.plist filte to use camera and photo library:
 ```sh 
 <key>NSCameraUsageDescription</key>
 <value>Uses Camera </value>
@@ -116,6 +116,7 @@ You can set the custom params any number of times after initializing. On calling
 
 ```sh
 [[AnimatorClient sharedClient] showCameraScreen];
+```
 
 ### Contact
 
