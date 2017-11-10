@@ -27,6 +27,7 @@
     //customParams.hotspotInnerCircleHexColor = @"#FF00FF";
     //customParams.hotspotOuterCircleHexColor = @"#006400";
     [[AnimatorClient sharedClient] setCustomParams:customParams];
+    [[AnimatorClient sharedClient] enableDirectAction:YES];
     return YES;
 }
 
