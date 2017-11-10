@@ -102,6 +102,19 @@ sample usage
 
 You can change the preferred language any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all screens in framework will have the language you have set previously.
 
+### Support DirectAction Feature 
+
+Direct Action Feature means, when a hotspot has only 1 CTA option available, then click on the hotspot will be treated as click on that CTA option when Direct Action feature is enabled. By default this feature is disabled. Clients who want this feature can enable it using the following method of AnimatorClient class:
+ 
+
+```sh
+- (void)enableDirectAction:(BOOL )isDirectActionEnabled;
+```
+sample usage
+```sh
+    [[AnimatorClient sharedClient] enableDirectAction:YES];
+```
+
 ### Customize the framework
 
 Animator Framework supports customization. As of now user can customise icons and background colours. Many more to come...
