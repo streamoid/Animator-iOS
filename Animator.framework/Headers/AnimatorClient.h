@@ -134,6 +134,15 @@ typedef enum : NSInteger
 - (void)setLanguage:(AnimatorSDKLanguage )language;
 
 /*!
+ * @breif Using this method client applications can toggle between DirectAction and no-DirectAction
+ *
+ * @discussion DirectionAction means, if a hotspot contains only 1 option, clicking on that hotspot should not display a hotspot view. Instead, it should treat the click on hotspot as click on that particular option
+ * @code [[AnimatorClient sharedClient] enableDirectAction:YES]; @endcode
+ *
+ */
+- (void)enableDirectAction:(BOOL )isDirectActionEnabled;
+
+/*!
  * @breif Shows the camera screen to proceed futher for IR search.
  *
  * @discussion Users of the sdk would call this method on a singleton AnimatorClient instance :
