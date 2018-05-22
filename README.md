@@ -1,6 +1,6 @@
 # Animator iOS SDK Releases
 
-[![N|Solid](http://www.streamoid.com/images/Streamoid-logo.png)](http://www.streamoid.com/)
+[![N|Solid](http://www.streamoid.com/images/logo.png)](http://www.streamoid.com/)
 
 This repository contains binary distributions of Animator iOS framework.
 
@@ -8,7 +8,7 @@ If you have any questions, comments, or issues related to Animator, Please conta
 
 ### Animator
 
-Animator iOS SDK provided by Streamoid Technologies, acts as a bridge between offline advertisements and purchasing those products online
+Animator iOS SDK (iOS 8 & above) provided by Streamoid Technologies, acts as a bridge between offline advertisements and purchasing those products online
 
 Imagine a scenario where you see some product advertisement in a newspaper ad or in a product catalogue, feel like knowing more about that product or buying it online. Animator iOS SDK solves the exact same problem.
 
@@ -93,9 +93,27 @@ It is optional to set the language. If no language is set, we use the default la
 After initializing an animator client in your application, you can specify the language you need to see the framework by using the following method in framework:
 
 ```sh
-+ (void)setLanguage:(AnimatorSDKLanguage )language;
+- (void)setLanguage:(AnimatorSDKLanguage )language;
 ```
+sample usage
+```sh
+    [[AnimatorClient sharedClient] setLanguage:eAnimatorLanguageSpanish];
+```
+
 You can change the preferred language any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all screens in framework will have the language you have set previously.
+
+### Support DirectAction Feature 
+
+Direct Action Feature means, when a hotspot has only 1 CTA option available, then click on the hotspot will be treated as click on that CTA option when Direct Action feature is enabled. By default this feature is disabled. Clients who want this feature can enable it using the following method of AnimatorClient class:
+ 
+
+```sh
+- (void)enableDirectAction:(BOOL )isDirectActionEnabled;
+```
+sample usage
+```sh
+    [[AnimatorClient sharedClient] enableDirectAction:YES];
+```
 
 ### Customize the framework
 

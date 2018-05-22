@@ -1,6 +1,0 @@
-framework module Animator {
-  umbrella header "Animator.h"
-
-  export *
-  module * { export * }
-}
