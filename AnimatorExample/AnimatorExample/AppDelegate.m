@@ -10,7 +10,7 @@
 #import <Animator/Animator.h>
 
 #define CLIENT_NAME @"Replace this with your company name"
-#define CLIENT_TOKEN @"Replace this with your token"
+#define CLIENT_TOKEN @"Replace this with your client token"
 
 @interface AppDelegate ()
 
