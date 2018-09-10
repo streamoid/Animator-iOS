@@ -85,12 +85,7 @@ extern NSString * _Nullable const kAnimatorClickedHotspotOption;
 typedef enum : NSInteger
 {
     eAnimatorLanguageEnglish,
-    eAnimatorLanguageSpanish,
-    eAnimatorLanguageRussian,
-    eAnimatorLanguageChineseSimplified,
-    eAnimatorLanguageChineseTraditional,
-    eAnimatorLanguageItalian,
-    eAnimatorLanguageGerman
+    eAnimatorLanguageSpanish
 }AnimatorSDKLanguage;
 
 

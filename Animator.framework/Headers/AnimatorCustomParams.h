@@ -37,12 +37,4 @@
 @property (nonatomic, strong) NSString *photoGalleryIcon;
 @property (nonatomic, strong) NSString *buyNowIcon;
 
-//Icons for Regular Ads ...
-@property (nonatomic, strong) NSString *regularAdMoreInfoIcon;
-@property (nonatomic, strong) NSString *regularAdVideoIcon;
-@property (nonatomic, strong) NSString *regularAdAudioIcon;
-@property (nonatomic, strong) NSString *regularAdMakeCallIcon;
-@property (nonatomic, strong) NSString *regularAdPhotoGalleryIcon;
-@property (nonatomic, strong) NSString *regularAdBuyNowIcon;
-
 @end
