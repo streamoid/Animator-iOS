@@ -88,7 +88,7 @@ Launch your application and verify that the connection is successful. You are no
 
 ### Use your preferred language
 
-Animator Framework supports multiple languages. As of now, English, Spanish, Chinese (Simplified), Chinese (Traditional), Italian, German are supported. Many more to come...
+Animator Framework supports multiple languages. As of now, English and Spanish are supported. Many more to come...
 It is optional to set the language. If no language is set, we use the default language used by app.
 After initializing an animator client in your application, you can specify the language you need to see the framework by using the following method in framework:
 
