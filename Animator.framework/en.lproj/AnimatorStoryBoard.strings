@@ -8,5 +8,11 @@
 /* Class = "UILabel"; text = "What you can do"; ObjectID = "dIp-8l-ltg"; */
 "dIp-8l-ltg.text" = "What you can do";
 
+/* Class = "UIButton"; normalTitle = "Buy"; ObjectID = "gTe-uQ-qyU"; */
+"gTe-uQ-qyU.normalTitle" = "Buy";
+
+/* Class = "UILabel"; text = "Click on a page of our demo to try it out http://streamoid.com/animator-demo "; ObjectID = "idY-LI-TwP"; */
+"idY-LI-TwP.text" = "Click on a page of our demo to try it out http://streamoid.com/animator-demo ";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "pQi-kq-Jia"; */
 "pQi-kq-Jia.text" = "Label";
