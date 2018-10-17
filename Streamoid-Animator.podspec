@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "Streamoid-Animator"
-  s.version = "2.2.1"
+  s.version = "2.2.2"
   s.summary = "Animator is the iOS client interface for using exact search sdk provided by Streamoid"
   s.license = "MIT"
   s.authors = {"vengal"=>"vengal@streamoid.com", "naveen"=>"naveen@streamoid.com"}
