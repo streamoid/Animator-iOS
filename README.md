@@ -150,6 +150,7 @@ As mentioned in the above code snippet, if `isNotificationEnabled` is set to YES
 *Keys passed in the notification's userinfo dictionary*
 
 kAnimatorClickedHotspotOption - Use this key to know which CTA is clicked by user
+
 kAnimatorClickedHotspotOptionValue - Use this key to know the value associated with the CTA clicked by user
 
 Example usage of listening to the notification is provided in the sample app in this repository
