@@ -23,10 +23,14 @@
 extern NSString * _Nonnull const kAnimatorClientIRSearch;
 
 /*!
- * @brief HotspotClicked -- Dispatched when the user dismissed the hotspot popup view.
+ * @brief HotspotClicked -- Dispatched when the user clicks on the hotspot icon.
  */
 extern NSString * _Nonnull const kAnimatorClientHotspotClicked;
 
+/*!
+ * @brief HotspotClicked -- Dispatched when the user taps on a option in the hotspot ctas.
+ */
+extern NSString * _Nonnull const kAnimatorClientHotspotOptionClicked;
 
 /*!
  * @brief kAnimatorIsMatchFound -- Key for to know whether match received on not in IR search which is in kAnimatorClientIRSearch notification's user info.
@@ -56,7 +60,16 @@ extern NSString * _Nullable const kAnimatorHotspotIds;
 extern NSString * _Nullable const kAnimatorQueryImageData;
 
 /*!
- * @brief kAnimatorClickedHotspotId -- Key for the clicked hotspot view's id which is in kAnimatorClientHotspotClicked notification's user info.
+ * @brief kAnimatorClickedHotspotDetails -- Key for the clicked hotspot's details which is in `kAnimatorClientHotspotClicked` notification's user info.
+ * @discussion - Use this constant as below.
+ * @code
+ * NSString *hotspotId = (NSString *)[notification.userInfo objectForKey:kAnimatorClickedHotspotDetails]
+ * @endCode
+ */
+extern NSString * _Nullable const kAnimatorClickedHotspotDetails;
+
+/*!
+ * @brief kAnimatorClickedHotspotId -- Key for the clicked hotspot view's id which is in `kAnimatorClientHotspotClicked` notification's user info.
  * @discussion - Use this constant as below.
  * @code
  * NSString *hotspotId = (NSString *)[notification.userInfo objectForKey:kAnimatorClickedHotspotId]
@@ -65,13 +78,22 @@ extern NSString * _Nullable const kAnimatorQueryImageData;
 extern NSString * _Nullable const kAnimatorClickedHotspotId;
 
 /*!
- * @brief kAnimatorClickedHotspotOption -- Key for the option selected hotspot view's popup view which is in kAnimatorClientHotspotClicked notification's user info.
+ * @brief kAnimatorClickedHotspotOption -- Key for the option selected in hotspot view's popup view which is in `kAnimatorClientHotspotOptionClicked` notification's user info.
  * @discussion - Use this constant as below.
  * @code
  * NSString *hotspotOption = (NSString *)[notification.userInfo objectForKey:kAnimatorClickedHotspotOption]
  * @endCode
  */
 extern NSString * _Nullable const kAnimatorClickedHotspotOption;
+
+/*!
+ * @brief kAnimatorClickedHotspotOptionValue -- Key for the option's value in selected hotspot view's popup view which is in `kAnimatorClientHotspotOptionClicked` notification's user info.
+ * @discussion - Use this constant as below.
+ * @code
+ * NSString *hotspotOption = (NSString *)[notification.userInfo objectForKey:kAnimatorClickedHotspotOptionValue]
+ * @endCode
+ */
+extern NSString * _Nullable const kAnimatorClickedHotspotOptionValue;
 
 
 /*!
@@ -136,6 +158,17 @@ typedef enum : NSInteger
  *
  */
 - (void)enableDirectAction:(BOOL )isDirectActionEnabled;
+
+/*!
+ * @breif Using this method client applications can toggle between Enabling/Disabling In-SDK browser
+ *
+ * @discussion By default, SDK uses browser for opening URLs. This method can be used to toggle that behaviour.
+ If the client Application disables default In-SDK browser handling, nothing will be done by SDK. Client app has to listen to the NSNotification with name `kAnimatorClientHotspotOptionClicked` and handle the url opening themselves
+ * @code [[AnimatorClient sharedClient] disableInSDKBrowser:YES]; @endcode
+ *
+ */
+- (void)disableInSDKBrowser:(BOOL )isInSDKBrowserDisabled;
+
 
 /*!
  * @breif Shows the camera screen to proceed futher for IR search.
