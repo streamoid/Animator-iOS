@@ -88,7 +88,7 @@ Launch your application and verify that the connection is successful. You are no
 
 ### Use your preferred language
 
-Animator Framework supports multiple languages. As of now, English, Spanish, Chinese (Simplified), Chinese (Traditional), Italian, German are supported. Many more to come...
+Animator Framework supports multiple languages. As of now, English and Spanish are supported. Many more to come...
 It is optional to set the language. If no language is set, we use the default language used by app.
 After initializing an animator client in your application, you can specify the language you need to see the framework by using the following method in framework:
 
@@ -104,7 +104,7 @@ You can change the preferred language any number of times after initializing. On
 
 ### Support DirectAction Feature 
 
-Direct Action Feature means, when a hotspot has only 1 CTA option available, then click on the hotspot will be treated as click on that CTA option when Direct Action feature is enabled. By default this feature is disabled. Clients who want this feature can enable it using the following method of AnimatorClient class:
+Direct Action Feature means, when a hotspot has only 1 CTA option available, then click on the hotspot will be treated as click on that CTA option when Direct Action feature is enabled. By default this feature is enabled. Clients who does not want this feature can disable it using the following method of AnimatorClient class:
  
 
 ```sh
@@ -112,7 +112,7 @@ Direct Action Feature means, when a hotspot has only 1 CTA option available, the
 ```
 sample usage
 ```sh
-    [[AnimatorClient sharedClient] enableDirectAction:YES];
+    [[AnimatorClient sharedClient] enableDirectAction:NO];
 ```
 
 ### Customize the framework
@@ -129,6 +129,15 @@ customParams.hotspotOuterCircleHexColor = @"#006400";
 [[AnimatorClient sharedClient] setCustomParams:customParams];
 ```
 You can set the custom params any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all icons and background colors in framework will have the custom values.
+
+### Supported audio/video content
+
+Video and audio content in the app is served using web URLs. The supported formats for audio and video are listed below.  
+##### Supported audio formats 
+1) .mp3
+##### Supported video formats
+1) .mp4
+2) YouTube videos of the format https://www.youtube.com/watch?v=(VIDEOID)
 
 ### Open framework's Camera
 

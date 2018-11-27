@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSString *cameraFlashOffIcon;
 @property (nonatomic, strong) NSString *cameraCloseIcon;
 @property (nonatomic, strong) NSString *cameraInfoIcon;
+@property (nonatomic, strong) NSString *cameraInfoCloseIcon;
 @property (nonatomic, strong) NSString *cameraBottomBarHexColor;
 @property (nonatomic, strong) NSString *cameraActivityIndicatorViewHexColor;
 
@@ -36,13 +37,6 @@
 @property (nonatomic, strong) NSString *makeCallIcon;
 @property (nonatomic, strong) NSString *photoGalleryIcon;
 @property (nonatomic, strong) NSString *buyNowIcon;
-
-//Icons for Regular Ads ...
-@property (nonatomic, strong) NSString *regularAdMoreInfoIcon;
-@property (nonatomic, strong) NSString *regularAdVideoIcon;
-@property (nonatomic, strong) NSString *regularAdAudioIcon;
-@property (nonatomic, strong) NSString *regularAdMakeCallIcon;
-@property (nonatomic, strong) NSString *regularAdPhotoGalleryIcon;
-@property (nonatomic, strong) NSString *regularAdBuyNowIcon;
+@property (nonatomic, strong) NSString *shareIcon;
 
 @end

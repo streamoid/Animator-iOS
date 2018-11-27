@@ -28,6 +28,7 @@
     //customParams.hotspotOuterCircleHexColor = @"#006400";
     [[AnimatorClient sharedClient] setCustomParams:customParams];
     [[AnimatorClient sharedClient] enableDirectAction:YES];
+    [[AnimatorClient sharedClient] disableInSDKBrowser:YES];
     return YES;
 }
 

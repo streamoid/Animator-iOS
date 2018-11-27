@@ -1,3 +1,4 @@
+
 /* Class = "UILabel"; text = "While taking a picture, hold the camera directly above the image and not at an angle."; ObjectID = "4kO-Bn-kcl"; */
 "4kO-Bn-kcl.text" = "Mientras toma una fotografía, sujete la cámara directamente sobre la imagen y no en ángulo.";
 
@@ -7,6 +8,11 @@
 /* Class = "UILabel"; text = "What you can do"; ObjectID = "dIp-8l-ltg"; */
 "dIp-8l-ltg.text" = "Lo que puedes hacer";
 
+/* Class = "UIButton"; normalTitle = "Buy"; ObjectID = "gTe-uQ-qyU"; */
+"gTe-uQ-qyU.normalTitle" = "Comprar";
+
+/* Class = "UILabel"; text = "Click on a page of our demo to try it out http://streamoid.com/animator-demo "; ObjectID = "idY-LI-TwP"; */
+"idY-LI-TwP.text" = "Haga clic en una página de nuestra demostración para probarlo http://streamoid.com/animator-demo ";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "pQi-kq-Jia"; */
 "pQi-kq-Jia.text" = "Etiqueta";
-
