@@ -102,7 +102,7 @@ sample usage
 
 You can change the preferred language any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all screens in framework will have the language you have set previously.
 
-### Support DirectAction Feature 
+### DirectAction Feature 
 
 Direct Action Feature means, when a hotspot has only 1 CTA option available, then click on the hotspot will be treated as click on that CTA option when Direct Action feature is enabled. By default this feature is enabled. Clients who does not want this feature can disable it using the following method of AnimatorClient class:
  
@@ -113,6 +113,18 @@ Direct Action Feature means, when a hotspot has only 1 CTA option available, the
 sample usage
 ```sh
     [[AnimatorClient sharedClient] enableDirectAction:NO];
+```
+
+### Disable/Enable "URL opening" by SDK
+
+By default, the sdk will open the URLs associated with Buy/Info CTAs in hotspots using Browser. An option has been provided to client application to stop SDK from handling url opening. That can be done via AnimatorClient's `disableInSDKBrowser:` method. If disableInSDKBroswer is set to YES, clicking on Buy/Info CTA will not show anything. Client Application has to handle the click via information passed in NSNotification
+
+```sh
+- (void)disableInSDKBrowser:(BOOL )isInSDKBrowserDisabled;
+```
+sample usage
+```sh
+[[AnimatorClient sharedClient] disableInSDKBrowser:YES];
 ```
 
 ### Customize the framework
@@ -129,6 +141,18 @@ customParams.hotspotOuterCircleHexColor = @"#006400";
 [[AnimatorClient sharedClient] setCustomParams:customParams];
 ```
 You can set the custom params any number of times after initializing. On calling `showCameraScreen` method to capture some image using the framwork, it can be seen that all icons and background colors in framework will have the custom values.
+
+### Listening to Hotspot CTA click event
+As mentioned in the above code snippet, if `isNotificationEnabled` is set to YES in customParams, client application can receive a NSNotification when a user clicks on a hotspot's cta like Buy/Video/Audio/Call
+
+*Name of the notification* : kAnimatorClientHotspotOptionClicked
+
+*Keys passed in the notification's userinfo dictionary*
+
+kAnimatorClickedHotspotOption - Use this key to know which CTA is clicked by user
+kAnimatorClickedHotspotOptionValue - Use this key to know the value associated with the CTA clicked by user
+
+Example usage of listening to the notification is provided in the sample app in this repository
 
 ### Supported audio/video content
 
